@@ -15,6 +15,7 @@ System.setProperty("webdriver.gecko.driver","F:\\Software Testing\\Tools and jar
 		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("http://facebook.com");
+		driver.close();
 	}
 
 }

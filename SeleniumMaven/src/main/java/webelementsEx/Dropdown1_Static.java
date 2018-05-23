@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Dropdown1_Static {
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args)throws InterruptedException {
 	
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();

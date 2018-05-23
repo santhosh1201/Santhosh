@@ -23,14 +23,14 @@ public class Webtable1 {
 		
 		System.out.println("no.of rows are:"+trs.size());
 		
-		/*for(WebElement tr:trs){
+		for(WebElement tr:trs){
 		List<WebElement> tds=tr.findElements(By.tagName("td"));
 		
 		System.out.println("no.of tds are:"+tds.size());
 		
 		}
 		System.out.println("***********");
-		*/
+		
 	}
 
 }
