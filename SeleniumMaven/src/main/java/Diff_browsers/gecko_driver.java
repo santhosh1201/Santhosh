@@ -10,7 +10,7 @@ public class gecko_driver {
 	public void browser() {
 	
 		// To work with webDriver 3.0.1 we should configure GeckoDriverServer
-System.setProperty("webdriver.gecko.driver","F:\\Software Testing\\Tools and jars\\geckodriver-v0.19.1-win64\\geckodriver.exe ");
+ System.setProperty("webdriver.gecko.driver","F:\\Software Testing\\Tools and jars\\geckodriver-v0.19.1-win64\\geckodriver.exe ");
 		
 		WebDriver driver = new FirefoxDriver();
 		
