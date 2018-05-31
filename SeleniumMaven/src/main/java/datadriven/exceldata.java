@@ -1,10 +1,9 @@
 package datadriven;
 
 import java.io.File;
-import java.io.FileInputStream;
+import java.io.FileInputStream; 
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 
 public class exceldata
 {
@@ -16,10 +15,10 @@ XSSFWorkbook wb;
 		try
 		{
 			wb=new XSSFWorkbook(new FileInputStream(new File(excelPath)));
-		} 
+		}
 		catch (Exception e) 
 		{
-			System.out.println("Unable to load Excel file "+e); 
+			System.out.println("Unable to load Excel file "+e);   
 		}
 		
 	}
