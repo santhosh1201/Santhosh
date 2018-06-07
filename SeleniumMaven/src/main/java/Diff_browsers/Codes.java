@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class allcodes 
 {
-WebDriver driver;
+WebDriver driver; 
 
 //Alert class
 
