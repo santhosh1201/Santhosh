@@ -1,7 +1,7 @@
-/*package datadriven;
+ /*package datadriven;
 import java.awt.Robot;
 import java.io.File;
-import java.util.i,nvaz\ List;
+import java.util.i,nvaz\List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -139,7 +139,7 @@ FileUtils.copyFile(src , new File("C:\\Users\\arte262_pavan\\Desktop\\pavan\\pav
 
 // this code is used to call screenshot 
 
-this.takeSnapShot(driver, "path to save in foldr and screenshot name.png") ;  
+this.takeSnapShot(driver, "path to save in folder and screenshot name.png");  
 
 // log4j syntax   this should be given before system.setproperties
 
