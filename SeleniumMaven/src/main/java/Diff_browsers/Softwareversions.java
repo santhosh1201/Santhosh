@@ -1,4 +1,4 @@
-/*package Diff_browsers;
+ /*package Diff_browsers;
 
 public class Softwareversions {
 	
@@ -7,7 +7,7 @@ public class Softwareversions {
 //	Eclipse---neon
 	
 //	java---- 1.8 version
-
+ 
 //	apache maven---3.5.3 version
 	
 	
@@ -18,8 +18,8 @@ public class Softwareversions {
 	
 //	ie driver
 
-	
-//	Slenium server 3.4.0
+	   
+//	Slenium server 3.4.0 
 	
 //	junit
 

@@ -85,7 +85,7 @@ for(WebElementradio:radios)
 radio.click();
 ---------
 
-// links
+// links 
 
 List<WebElement> links=driver.findElements(By.tagName("a"));
 System.out.println("No.of links"+links.size());
@@ -114,7 +114,7 @@ FileUtils.copyFile(src , new File("C:\\Users\\arte262_pavan\\Desktop\\pavan\\pav
  
 // parllel testing .xml file 
  <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">        
 <suite name="Parallel test suite" parallel="tests">
    
    <test name="Firefox Test">
