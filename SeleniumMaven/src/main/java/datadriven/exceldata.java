@@ -27,7 +27,7 @@ XSSFWorkbook wb;
 	{
 		
 		int rows= wb.getSheetAt(sheetIndex).getLastRowNum();
-		
+		 
 		return rows+1;
 	}
 	
@@ -57,7 +57,7 @@ XSSFWorkbook wb;
 	public int getNumericData(String sheetName,int row,int column)
 	{
 		
-		return (int)wb.getSheet(sheetName).getRow(row).getCell(column).getNumericCellValue();
+ 	return (int)wb.getSheet(sheetName).getRow(row).getCell(column).getNumericCellValue();
 	}
 
 
