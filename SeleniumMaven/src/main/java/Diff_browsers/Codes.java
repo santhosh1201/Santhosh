@@ -48,9 +48,7 @@ we.sendKeys(Keys.ARROW_DOWN);
 we.sendKeys(Keys.ARROW_DOWN);
 we.sendKeys(Keys.ENTER);
 
-
-
-//Screenshot
+// Screenshot
 
 TakesScreenshotts=(TakesScreenshot)driver;
 File src=ts.getScreenshotAs(OutputType.FILE);
