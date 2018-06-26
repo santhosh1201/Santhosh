@@ -1,7 +1,6 @@
 package simplepom;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
@@ -21,14 +20,10 @@ public class pomtest {
 		
 		po.loginpage("admin", "admin");
 		
-		// ANOTHER TYPE DECLARATION CODE FROM OBJ
+		// ANOTHER TYPE DECLARATION CODE FROM OBJ FOR REUSABILITY
 	
 		po.typeusername("Admin");
 		po.typepassword("Admin");
 		po.sub();
 	}
-
 }
-
-
-

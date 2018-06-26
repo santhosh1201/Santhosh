@@ -1,138 +1,4 @@
-/* package datadriven;
-import java.awt.Robot;
-import java.io.File;
-import java.util.i,nvaz\List;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-
-public class allcodes 
-{
-WebDriver driver; 
-
-//Alert class
-
-Alert alt=driver.switchTo().alert();
-alt.accept();
-alt.dismiss();
-alt.sendKeys("");
-alt.getText();
-
-//Action class
-
-Actions act=new Actions(driver);
-act.moveToELement(webelement).click().build().perform();
-act.moveToELement(webelement).Contextclick().build().perform();
-act.moveToElement(search).keyDown(keys.SHIFT).sendKeys("smallerletters").build().perform();
-
-
-// actions class
- 
-WebElement cc=driver.findElement(By.linkText("Customer Care"));
-Actions act=new Actions(driver);
-act.moveToElement(cc).build().perform();
-//keyboard events
-WebElement we= driver.findElement(By.id("1st-ib"));
-
-we.sendKeys("Selenium");
-Thread.sleep(3000);
-we.sendKeys(Keys.ARROW_DOWN);
-we.sendKeys(Keys.ARROW_DOWN);
-we.sendKeys(Keys.ENTER);
-
-// Screenshot
-
-TakesScreenshotts=(TakesScreenshot)driver;
-File src=ts.getScreenshotAs(OutputType.FILE);
-FileUtils.copyFile(src,new File("path of the file".png));
-
-
-//Robotclass
-
-Robot rb=new Robot();
-keyPress(keyEvent.VK_S); //VK-Virtual Keyboard
-keyRelease(keyEvent.VK_S);
-
-
-//Frames
- 
-driver.switchTo().frame(framename);
-
-
-//Checkboxes,Radiobuttons,Links,Dropbox
-
-List<WebElement>chks=driver.findElements(By.name("Checkbox"));
-System.out.println("No.ofCheckboxes are:"+chks.size());
-for (WebElementchck:chcks)
-if(!chck.isSelected()) // To check all checkboxes
-if(chck.isSelected())  //To uncheck all chechboxes
-chck.click();
-
----------
-
-List<WebElement> radios = driver.findElements(By.className("_58mt"));
-for(WebElementradio:radios)
-radio.click();
----------
-
-// links 
-
-List<WebElement> links=driver.findElements(By.tagName("a"));
-System.out.println("No.of links"+links.size());
-for(int i=0;i<=links.size();i++)
-{
-System.out.println(links.get(i).getText());
-}
-----------
-Select date=new Select(driver.findElement(By.xpath("//*[@id='day']")));
-date.selectByIndex(index);
-date.selectByValue(value);
-date.selectByVisibleText(text);
-List<WebElement>options=date.getOptions();
-System.out.println("No of values"+options.size());
-for(inti=0;i<=options.size();i++)
-System.out.println(options.get(i).getText());
-
-
-//screenshot
-
-TakesScreenshot ts= (TakesScreenshot)driver;
-File src =ts.getScreenshotAs(OutputType.FILE);
-FileUtils.copyFile(src , new File("C:\\Users\\arte262_pavan\\Desktop\\pavan\\pavan workspace\\test\\pavan\\login.png"));
- 
- 
- 
-// parllel testing .xml file 
- <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">        
-<suite name="Parallel test suite" parallel="tests">
-   
-   <test name="Firefox Test">
-   <parameter name="browser" value="Firefox"/>
-     <classes>
-       <class name="Webelements.paralleltesting"/>
-     </classes>
-     </test> 
-   
-   <test name="Chrome Test">
-   <parameter name="browser" value="chrome"/>
-     <classes>
-     <class name="Webelements.paralleltesting"/>
-   </classes>
-   </test>
-   
-</suite> <!-- Suite -->
-
-
-
+/*
 
 
 // this code is used to call screenshot 
@@ -276,31 +142,34 @@ WebDriver driver;
 			 	
 			 	@Parameters("browser")
 			 	@BeforeTest
-			 		public void openBrowser(String browser) {
-			 			try {
+			 	public void openBrowser(String browser) {
+				try {
 			 				
-			 				if (browser.equalsIgnoreCase("Firefox")) {
-			 					System.setProperty("webdriver.gecko.driver","C:\\Users\\arte262_pavan\\Desktop\\geckodriver.exe ");
-			 					driver = new FirefoxDriver();
+				if (browser.equalsIgnoreCase("Firefox")) {
+			 	
+			 	System.setProperty("webdriver.gecko.driver","C:\\Users\\arte262_pavan\\Desktop\\geckodriver.exe ");
+				driver = new FirefoxDriver();
 			 					
-			 				} 
-			 				else if (browser.equalsIgnoreCase("chrome")) 
-			 				{
-			 					System.setProperty("webdriver.chrome.driver", "C:\\Users\\arte262_pavan\\Desktop\\chromedriver_win32 (1)\\chromedriver.exe");
-			 					driver = new ChromeDriver();
-			 				} 
-                   		else if (browser.equalsIgnoreCase("IE"))
-			 				{
+			 } 
+			else if (browser.equalsIgnoreCase("chrome")) 
+			{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\arte262_pavan\\Desktop\\chromedriver_win32 (1)\\chromedriver.exe");
+		    	driver = new ChromeDriver();
+			 } 
+         		
+         		else if (browser.equalsIgnoreCase("IE"))
+			 {
 			 					
 			 System.setProperty("webdriver.ie.driver","C:\\Users\\USER\\Desktop\\Santhosh Maven\\Browser drivers\\IEDriverServer.exe");
-			 					driver = new InternetExplorerDriver();
-			 				}
+			 driver = new InternetExplorerDriver();
+			}
 			 			
-			 			} catch (WebDriverException e) {
+			} 
+			catch (WebDriverException e) {
 			 				
-			 			System.out.println(e.getMessage());
-			 			}
-			 		}
+			 System.out.println(e.getMessage());
+			 }
+			 }
 			 		
 			 		@Test
 			 		public void login_TestCase() {
@@ -318,17 +187,17 @@ WebDriver driver;
 			 		public void closeBrowser() {
 			 			driver.quit();
 			 		
-
 			 	}
 
 			 	}         
 			 
 			 
-			 
-			 // parllel testing 0.xml file      
-  * here .xml file will be obtained after converting into testNG suit and we need to open that xml file and we have to give parameter and browser name. 
+			// parllel testing 0.xml file      
+  
+  
+  * Here .xml file will be obtained after converting into testNG suit and we need to open that xml file
+  * we have to give parameter and browser name. 
 			  
-			
 			
 			 <?xml version="1.0" encoding="UTF-8"?>
 			 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
@@ -352,15 +221,6 @@ WebDriver driver;
 			
 			
 			
-			
-			// actions class
-			 
-			 
-			 WebElement cc=driver.findElement(By.linkText("Customer Care"));
-			Actions act=new Actions(driver);
-			act.moveToElement(cc).build().perform();
-			
-			
 			//keyboard events
 			
 			
@@ -375,14 +235,13 @@ WebDriver driver;
 			we.sendKeys(Keys.ENTER);
 
 
+// DATADRIVEN FRAMEWORK
 
+ exceldataprovider background code
 
-
+ For this data driven we need  apache-poi and poi-ooxml dependencies for maven project and jars for java project.
+ WE NEED TO PREPARE ONE EXCEL DOC AND WE HAVE TO USE THAT DOC ADDRESS			
 			
-			// DATADRIVEN FRAMEWORK
-	// exceldataprovider background code
-//for this data driven we need  apache-poi and poi-ooxml dependencies for maven project and jars for java project.
-// WE NEED TO PREPARE ONE EXCEL DOC AND WE HAVE TO USE THAT DOC ADDRESS			
 			package datadriven;
 
 			import java.io.FileInputStream;
@@ -468,14 +327,14 @@ WebDriver driver;
 				
 						
 						
-					WebDriver driver;
-					@Test(dataProvider="PAVAN")
-					public void myntratest(String mailID,String password ,String pincode , String locatity,String name,String address,String mobile,String cardno,String nameoncard,String cvv) throws Exception
-					{
+			WebDriver driver;
+			@Test(dataProvider="PAVAN")
+	public void myntratest(String mailID,String password ,String pincode , String locatity,String name,String address,String mobile,String cardno,String nameoncard,String cvv) throws Exception
+		{
 			
 			
-						System.setProperty("webdriver.chrome.driver", "C:\\Users\\arte262_pavan\\Desktop\\chromedriver_win32 (1)\\chromedriver.exe");
-						driver=new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\arte262_pavan\\Desktop\\chromedriver_win32 (1)\\chromedriver.exe");
+		driver=new ChromeDriver();
 			
 			//write codde to perform some action
 			     
@@ -658,14 +517,6 @@ public class testcases {
 }
 
 
-
-
-
-
-
-
-
-
     //every step screenshot capture 
 	WebDriver driver;
 	@Test
@@ -686,10 +537,6 @@ public class testcases {
 		 File DestFile=new File(fileWithPath);
  org.apache.commons.io.FileUtils.copyFile(src1, DestFile);
 	}
-
-
-
-
 
 
                      // AUTOIT 
@@ -1517,34 +1364,9 @@ System.out.println("Screenshot taken");
 		System.out.println("Exception while taking screenshot "+e.getMessage());
 	} 
 }
+
 		driver.quit();
 		}
 }
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 */
