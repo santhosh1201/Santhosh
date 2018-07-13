@@ -29,6 +29,11 @@ public class sikul {
 	
 	screen.type(image2, "9959");
 	
+	
+Pattern image3 = new Pattern("C:\\Users\\Santhosh\\Desktop\\Screenshot\\sinup.PNG");
+	
+	screen.click(image3);
+	
 
 	driver.close();
 

@@ -19,7 +19,7 @@ XSSFWorkbook wb;
 		catch (Exception e) 
 		{
 			System.out.println("Unable to load Excel file "+e);   
-		}
+		} 
 		
 	}
 	

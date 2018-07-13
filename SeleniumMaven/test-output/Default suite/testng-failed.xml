@@ -3,11 +3,11 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="simplepom.pomtest">
+      <class name="Sikuli.sikul">
         <methods>
-          <include name="verifylogin"/>
+          <include name="sikuli"/>
         </methods>
-      </class> <!-- simplepom.pomtest -->
+      </class> <!-- Sikuli.sikul -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

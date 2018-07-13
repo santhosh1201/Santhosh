@@ -108,6 +108,7 @@ WebDriver driver;
 			date.selectByIndex(index);
 			date.selectByValue(value);
 			date.selectByVisibleText(text);
+			
 			List<WebElement>options=date.getOptions();
 			System.out.println("No of values"+options.size());
 			
@@ -121,6 +122,10 @@ WebDriver driver;
 			TakesScreenshot ts= (TakesScreenshot)driver;
 			 File src =ts.getScreenshotAs(OutputType.FILE);
 			 FileUtils.copyFile(src , new File("C:\\Users\\arte262_pavan\\Desktop\\pavan\\pavan workspace\\test\\pavan\\login.png"));
+			
+		
+			
+			
 			
 			// parllel testing ,cross browser testing
 			
@@ -206,7 +211,7 @@ WebDriver driver;
 			   <test name="Firefox Test">
 			   <parameter name="browser" value="Firefox"/>
 			     <classes>
-			       <class name="Webelements.paralleltesting"/>
+			      <class name="Webelements.paralleltesting"/>
 			     </classes>
 			     </test> 
 			   
@@ -869,6 +874,7 @@ public void screenshotmethod(WebDriver driver,String path) throws Exception {
 	
 	TakesScreenshot ts=(TakesScreenshot)driver;
 	File source=ts.getScreenshotAs(OutputType.FILE);
+
 	File dest= new File(path);
 	FileUtils.copyFile(source, dest);
 }
@@ -1216,10 +1222,6 @@ public static void main(String args[]) throws FindFailed {
 }
 }
 
-
-
-
-
                     // calling screenshot method to another method
 
 
@@ -1262,11 +1264,6 @@ public void screenshotmethod() throws Exception {
 }
 
 
-
-
-
-
-
                     // taking  step by step screenshot
 
 package screenshot;
@@ -1306,8 +1303,6 @@ public void screenshotmethod(WebDriver driver,String path) throws Exception {
 	FileUtils.copyFile(source, dest);
 }
 }
-
-
 
 
              // taking screenshot for failed and passed testcases
