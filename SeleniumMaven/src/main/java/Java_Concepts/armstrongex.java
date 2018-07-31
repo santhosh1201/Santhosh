@@ -13,12 +13,11 @@ public class armstrongex {
 	    n=n/10;  
 	    c=c+(r*r*r);  
 	    }  
-	    if(temp==c)  
-	    System.out.println("armstrong number");   
+	    if(temp==c)   
+	    System.out.println("armstrong number");     
 	    else  
 	    System.out.println("Not armstrong number");   
 	    
 	   }  
 	}  
 	
-
